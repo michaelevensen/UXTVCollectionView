@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Cover" customModule="UXTVCollectionView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzz-Mp-o1d" userLabel="Content View">
+                    <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cover Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7EB-aE-BJ1">
+                            <rect key="frame" x="124" y="254" width="350" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="350" id="X5x-85-oLv"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="60"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uI-cc-6X4">
+                            <rect key="frame" x="124" y="363" width="685" height="405"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="405" id="7qp-JW-IKN"/>
+                                <constraint firstAttribute="width" constant="685" id="Ypr-UK-heb"/>
+                            </constraints>
+                            <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In volutpat metus eu finibus euismod. Integer efficitur congue nulla eget accumsan. Quisque rutrum nisi dolor, ac dictum ante malesuada quis. Morbi consequat id tellus eu commodo. In erat ipsum, porttitor in semper ac, aliquam et libero. Donec vulputate vel velit non lacinia. Proin sit amet finibus purus. Integer sed lacus vitae neque varius accumsan non eu magna. Sed et nisl fringilla risus pellentesque laoreet. Etiam sagittis suscipit porttitor.</string>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="2uI-cc-6X4" firstAttribute="leading" secondItem="fzz-Mp-o1d" secondAttribute="leading" constant="124" id="FzS-dZ-vPn"/>
+                        <constraint firstItem="2uI-cc-6X4" firstAttribute="top" secondItem="7EB-aE-BJ1" secondAttribute="bottom" constant="39" id="V9s-U7-df6"/>
+                        <constraint firstAttribute="bottom" secondItem="2uI-cc-6X4" secondAttribute="bottom" constant="312" id="cIG-qQ-Dcv"/>
+                        <constraint firstItem="7EB-aE-BJ1" firstAttribute="leading" secondItem="fzz-Mp-o1d" secondAttribute="leading" constant="124" id="dsq-c6-xhp"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="fzz-Mp-o1d" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Dts-XC-NeB"/>
+                <constraint firstItem="fzz-Mp-o1d" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="i6Q-v0-WAS"/>
+                <constraint firstAttribute="bottom" secondItem="fzz-Mp-o1d" secondAttribute="bottom" id="tiS-Yd-JVA"/>
+                <constraint firstAttribute="trailing" secondItem="fzz-Mp-o1d" secondAttribute="trailing" id="zFJ-Pa-M6M"/>
+            </constraints>
+            <connections>
+                <outlet property="contentView" destination="fzz-Mp-o1d" id="7eo-5s-xJT"/>
+                <outlet property="textView" destination="2uI-cc-6X4" id="rIe-qC-YDs"/>
+            </connections>
+        </view>
+    </objects>
+</document>
