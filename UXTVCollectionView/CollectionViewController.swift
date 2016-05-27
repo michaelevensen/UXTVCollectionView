@@ -43,12 +43,28 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         self.coverView?.preferredFocusedView
         self.coverView?.setNeedsFocusUpdate()
         
+        
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(CollectionViewController.handleTap(_:)))
+//        tapRecognizer.allowedPressTypes = [NSNumber(integer: UIPressType.Select.rawValue)];
+        self.view.addGestureRecognizer(tapRecognizer)
+        
 //        focusGuide.preferredFocusedView = self.coverView
         
 //        print(coverView?.focused)
         
         // set inset
         self.collectionView?.contentInset.left = self.bounds.width - (self.bounds.width / 4)
+    }
+    
+    func handleTap(recognizer: UITapGestureRecognizer) {
+        print("tap")
+        
+        self.coverShouldBeInFocus = false
+        
+        
+        let cell = self.collectionView?.cellForItemAtIndexPath(NSIndexPath(forItem: 0, inSection: 0))
+        cell?.preferredFocusedView
+        self.collectionView?.setNeedsFocusUpdate()
     }
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -70,7 +86,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
 
 //        print(context.nextFocusedView)
         
-        self.coverShouldBeInFocus = false
+//        self.coverShouldBeInFocus = false
         
         if context.nextFocusedView==self.coverView {
             print("alright")
